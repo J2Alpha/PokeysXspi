@@ -1,0 +1,11 @@
+17:44:57 **** Incremental Build of configuration Debug for project pokeysspi ****
+Info: Internal Builder is used for build
+g++ "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\CHeaders\\XPLM" "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\CHeaders\\Wrappers" "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\CHeaders\\Widgets" -O0 -g3 -Wall -c -fmessage-length=0 -o pokeysspi.o "..\\pokeysspi.cpp" 
+..\pokeysspi.cpp:15:18: warning: extra tokens at end of #include directive [enabled by default]
+In file included from ..\pokeysspi.cpp:26:0:
+..\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+..\pokeysspi.cpp: In function 'int XPluginEnable()':
+..\pokeysspi.cpp:71:24: warning: deprecated conversion from string constant to 'LPTSTR {aka char*}' [-Wwrite-strings]
+..\pokeysspi.cpp:96:71: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:124:67: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
+g++ "-Le:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\Libraries\\Win" -shared -o libpokeysspi.xpl pokeysspi.o bagpipes.o -lXPWidgets_64 -lXPLM_64 -llibpokeylib 

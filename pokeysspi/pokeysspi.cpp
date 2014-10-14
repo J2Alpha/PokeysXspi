@@ -144,6 +144,6 @@ void	MyHotKeyCallback(void * inRefcon)
 	 * was pressed!  We can identify our hot key by the 'refcon' value though.
 	 * This is because our hot key could have been remapped by the user and we
 	 * wouldn't know it. */
-	XPLMSpeakString("Hello World!");
+	//XPLMSpeakString("Hello World!");
 }
 

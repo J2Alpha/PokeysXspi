@@ -1,0 +1,185 @@
+17:08:01 **** Rebuild of configuration Debug for project pokeylib ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibCoreSockets.o" "..\\pokeyslib\\PoKeysLibCoreSockets.c" 
+In file included from ..\pokeyslib\PoKeysLibCoreSockets.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+..\pokeyslib\PoKeysLibCoreSockets.c: In function 'PK_SearchNetworkDevices':
+..\pokeyslib\PoKeysLibCoreSockets.c:285:58: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:285:68: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:285:80: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:285:94: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:357:47: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:358:46: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:359:50: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:359:61: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:360:59: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:360:70: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:360:81: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:360:92: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:361:44: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:362:64: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:362:76: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:362:88: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:362:100: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:395:47: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:396:46: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:397:50: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:397:61: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:398:59: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:398:70: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:398:81: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:398:92: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:399:44: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:400:64: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:400:76: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:400:88: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c:400:100: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+..\pokeyslib\PoKeysLibCoreSockets.c: In function 'SendEthRequest':
+..\pokeyslib\PoKeysLibCoreSockets.c:692:49: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibIO.o" "..\\pokeyslib\\PoKeysLibIO.c" 
+In file included from ..\pokeyslib\PoKeysLibIO.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibEncoders.o" "..\\pokeyslib\\PoKeysLibEncoders.c" 
+In file included from ..\pokeyslib\PoKeysLibEncoders.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibLCD.o" "..\\pokeyslib\\PoKeysLibLCD.c" 
+In file included from ..\pokeyslib\PoKeysLibLCD.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\hid.o" "..\\pokeyslib\\hid.c" 
+..\pokeyslib\hid.c: In function 'hid_enumerate':
+..\pokeyslib\hid.c:272:18: warning: variable 'devinfo_data' set but not used [-Wunused-but-set-variable]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibPulseEngine.o" "..\\pokeyslib\\PoKeysLibPulseEngine.c" 
+In file included from ..\pokeyslib\PoKeysLibPulseEngine.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibMatrixKB.o" "..\\pokeyslib\\PoKeysLibMatrixKB.c" 
+In file included from ..\pokeyslib\PoKeysLibMatrixKB.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibDeviceData.o" "..\\pokeyslib\\PoKeysLibDeviceData.c" 
+In file included from ..\pokeyslib\PoKeysLibDeviceData.c:22:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+..\pokeyslib\PoKeysLibDeviceData.c: In function 'CompareName':
+..\pokeyslib\PoKeysLibDeviceData.c:61:5: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:23:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/string.h:49:40: note: expected 'const char *' but argument is of type 'signed char *'
+..\pokeyslib\PoKeysLibDeviceData.c: In function 'PK_DeviceDataGet':
+..\pokeyslib\PoKeysLibDeviceData.c:103:9: warning: pointer targets in passing argument 1 of 'CompareName' differ in signedness [-Wpointer-sign]
+..\pokeyslib\PoKeysLibDeviceData.c:59:9: note: expected 'signed char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:103:9: warning: pointer targets in passing argument 2 of 'CompareName' differ in signedness [-Wpointer-sign]
+..\pokeyslib\PoKeysLibDeviceData.c:59:9: note: expected 'signed char *' but argument is of type 'char *'
+..\pokeyslib\PoKeysLibDeviceData.c:123:9: warning: pointer targets in passing argument 1 of 'CompareName' differ in signedness [-Wpointer-sign]
+..\pokeyslib\PoKeysLibDeviceData.c:59:9: note: expected 'signed char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:123:9: warning: pointer targets in passing argument 2 of 'CompareName' differ in signedness [-Wpointer-sign]
+..\pokeyslib\PoKeysLibDeviceData.c:59:9: note: expected 'signed char *' but argument is of type 'char *'
+..\pokeyslib\PoKeysLibDeviceData.c:314:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:317:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:320:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:323:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:326:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:329:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:332:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:335:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:338:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:341:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:344:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:347:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:350:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:353:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:357:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:22:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/stdio.h:295:37: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:496:5: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:23:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/string.h:49:40: note: expected 'const char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:498:9: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:23:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/string.h:45:39: note: expected 'char *' but argument is of type 'unsigned char *'
+..\pokeyslib\PoKeysLibDeviceData.c:498:9: warning: pointer targets in passing argument 2 of 'strcpy' differ in signedness [-Wpointer-sign]
+In file included from ..\pokeyslib\PoKeysLibCore.h:23:0,
+                 from ..\pokeyslib\PoKeysLibDeviceData.c:23:
+c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/string.h:45:39: note: expected 'const char *' but argument is of type 'unsigned char *'
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibI2C.o" "..\\pokeyslib\\PoKeysLibI2C.c" 
+In file included from ..\pokeyslib\PoKeysLibI2C.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibRTC.o" "..\\pokeyslib\\PoKeysLibRTC.c" 
+In file included from ..\pokeyslib\PoKeysLibRTC.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibPoNET.o" "..\\pokeyslib\\PoKeysLibPoNET.c" 
+In file included from ..\pokeyslib\PoKeysLibPoNET.c:22:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibFastUSB.o" "..\\pokeyslib\\PoKeysLibFastUSB.c" 
+In file included from ..\pokeyslib\PoKeysLibFastUSB.c:22:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibCore.o" "..\\pokeyslib\\PoKeysLibCore.c" 
+In file included from ..\pokeyslib\PoKeysLibCore.c:22:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+..\pokeyslib\PoKeysLibCore.c: In function 'PK_ConnectToPoKeysDevice':
+..\pokeyslib\PoKeysLibCore.c:453:5: warning: format '%lu' expects argument of type 'long unsigned int', but argument 3 has type 'unsigned int' [-Wformat]
+..\pokeyslib\PoKeysLibCore.c: In function 'SendRequest_multiPart':
+..\pokeyslib\PoKeysLibCore.c:685:1: warning: control reaches end of non-void function [-Wreturn-type]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibSPI.o" "..\\pokeyslib\\PoKeysLibSPI.c" 
+In file included from ..\pokeyslib\PoKeysLibSPI.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLib1Wire.o" "..\\pokeyslib\\PoKeysLib1Wire.c" 
+In file included from ..\pokeyslib\PoKeysLib1Wire.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibPulseEngine_v2.o" "..\\pokeyslib\\PoKeysLibPulseEngine_v2.c" 
+In file included from ..\pokeyslib\PoKeysLibPulseEngine_v2.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibPoIL.o" "..\\pokeyslib\\PoKeysLibPoIL.c" 
+In file included from ..\pokeyslib\PoKeysLibPoIL.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+..\pokeyslib\PoKeysLibPoIL.c: In function 'PK_PoILChunkReadMemory':
+..\pokeyslib\PoKeysLibPoIL.c:262:14: warning: unused variable 'address2' [-Wunused-variable]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "pokeyslib\\PoKeysLibMatrixLED.o" "..\\pokeyslib\\PoKeysLibMatrixLED.c" 
+In file included from ..\pokeyslib\PoKeysLibMatrixLED.c:21:0:
+..\pokeyslib\PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+g++ -shared -o libpokeylib.dll "pokeyslib\\hid.o" "pokeyslib\\PoKeysLibSPI.o" "pokeyslib\\PoKeysLibRTC.o" "pokeyslib\\PoKeysLibPulseEngine_v2.o" "pokeyslib\\PoKeysLibPulseEngine.o" "pokeyslib\\PoKeysLibPoNET.o" "pokeyslib\\PoKeysLibPoIL.o" "pokeyslib\\PoKeysLibMatrixLED.o" "pokeyslib\\PoKeysLibMatrixKB.o" "pokeyslib\\PoKeysLibLCD.o" "pokeyslib\\PoKeysLibIO.o" "pokeyslib\\PoKeysLibI2C.o" "pokeyslib\\PoKeysLibFastUSB.o" "pokeyslib\\PoKeysLibEncoders.o" "pokeyslib\\PoKeysLibDeviceData.o" "pokeyslib\\PoKeysLibCoreSockets.o" "pokeyslib\\PoKeysLibCore.o" "pokeyslib\\PoKeysLib1Wire.o" -liphlpapi -lsetupapi -lWs2_32 
+
+17:08:05 Build Finished (took 3s.698ms)
+

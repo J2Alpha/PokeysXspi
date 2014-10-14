@@ -1,0 +1,18 @@
+17:07:52 **** Rebuild of configuration Debug for project pokeyreader ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o pokeyreader.o "..\\pokeyreader.cpp" 
+..\pokeyreader.cpp:17:19: warning: deprecated conversion from string constant to 'LPTSTR {aka char*}' [-Wwrite-strings]
+..\pokeyreader.cpp:21:23: warning: deprecated conversion from string constant to 'LPTSTR {aka char*}' [-Wwrite-strings]
+..\pokeyreader.cpp: In function 'int commencepiping()':
+..\pokeyreader.cpp:67:68: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeyreader.cpp: In function 'int setpipemode(DWORD)':
+..\pokeyreader.cpp:90:79: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeyreader.cpp: In function 'int pipe_stuff(LPTSTR)':
+..\pokeyreader.cpp:98:78: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeyreader.cpp:109:73: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeyreader.cpp: In function 'int pipe_smoke(TCHAR*)':
+..\pokeyreader.cpp:134:74: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
+g++ -o pokeyreader.exe pokeyreader.o 
+
+17:07:53 Build Finished (took 890ms)
+

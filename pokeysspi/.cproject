@@ -59,8 +59,8 @@
 									<listOptionValue builtIn="false" value="&quot;e:\Users\J2Alpha\code\pokeysserialiser\pokeysspi\XPSDK213\SDK\Libraries\Win&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.341125562" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
-									<listOptionValue builtIn="false" value="XPWidgets"/>
-									<listOptionValue builtIn="false" value="XPLM"/>
+									<listOptionValue builtIn="false" value="XPWidgets_64"/>
+									<listOptionValue builtIn="false" value="XPLM_64"/>
 									<listOptionValue builtIn="false" value="libpokeylib"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1607549716" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
