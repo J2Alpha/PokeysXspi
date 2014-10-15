@@ -12,7 +12,7 @@
 //standard headers from c++
 #include <string.h>
 #include <stdio.h>
-#include <math.h>µ
+#include <math.h>
 //piping stuff headers
 #include <tchar.h>
 //#include <strsafe.h>  we are not using win sdk if it can be helped!

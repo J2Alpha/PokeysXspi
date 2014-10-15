@@ -1,0 +1,38 @@
+/*
+ * pokeyreader.cpp
+ *
+ *  Created on: 13 okt. 2014
+ *      Author: J2Alpha
+ */
+
+#include "pokeyreader.h"
+
+vector<vector<int > >ioset ={{CS,PK_PinCap_digitalInput},
+							{SCK,PK_PinCap_digitalInput},
+							{MOSI,PK_PinCap_digitalInput},
+							{MISO,PK_PinCap_digitalInput}};
+LPTSTR lpvMessage=TEXT("Default message from client.");
+
+int _tmain(int argc, TCHAR *argv[]){
+
+	if( argc > 1 )lpvMessage=argv[1];
+	TCHAR buffy(pipe_getbufsize());
+    commencepiping();
+	// The pipe connected; change to message-read mode.
+    setpipemode(PIPE_READMODE_MESSAGE);
+	// Send a message to the pipe server.
+    pipe_stuff(lpvMessage);
+	printf("\nMessage sent to server, receiving reply as follows:\n");
+	pipe_smoke(&buffy);
+	printf("\n<End of message, press ENTER to terminate connection and exit>");
+	//open pokey
+	pokeys_search_connect(0,0,0);
+	//send pokey config
+	pokeys_setIO(&ioset);
+	//check cs, do a read
+	_getch();
+	pipe_extinguish();
+	return 0;
+}
+
+

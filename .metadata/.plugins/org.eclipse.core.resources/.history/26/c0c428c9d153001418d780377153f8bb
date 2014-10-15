@@ -1,0 +1,23 @@
+/*
+ * pokeyconfigures.h
+ *
+ *  Created on: 14 okt. 2014
+ *      Author: J2Alpha
+ */
+
+#ifndef POKEYCONFIGURES_H_
+#define POKEYCONFIGURES_H_
+
+#include "pokeylib.h"
+
+// Initialize COM
+CoInitialize(NULL);
+
+long st = 0;
+unsigned char id = 0;
+
+// PoKeys device pointer
+IPoKeysDevicePtr ptr;
+
+
+#endif /* POKEYCONFIGURES_H_ */

@@ -1,0 +1,88 @@
+/*
+ * pokeyconfigures.cpp
+ *
+ *  Created on: 14 okt. 2014
+ *      Author: J2Alpha
+ */
+
+#include "pokeyconfigures.h"
+
+int pokeys_search_connect(int pokeysnum,int method,int specific){
+
+	switch (method)
+	{
+	case 0:
+		pokeys_search_net_connect(pokeysnum,specific);
+		break;
+	case 1:
+		pokeys_search_usb_connect(pokeysnum, specific);
+		break;
+	case 2:
+		pokeys_search_any_connect(pokeysnum,specific);
+		break;
+	default:
+		pokeys_search_any_connect(pokeysnum,specific);
+		break;
+	}
+	// This is how the connection with network PoKeys devices is established
+	return 0;
+}
+//subversions called by the pokeyssearchandconnect
+int pokeys_search_any_connect(int pokeysnum, int specific)
+{
+	pokeys_search_net_connect(pokeysnum,specific);
+	pokeys_search_usb_connect(pokeysnum, specific);
+	return 0;
+}
+int pokeys_search_usb_connect(int pokeysnum, int specific)
+{
+	usbDevNum = PK_EnumerateUSBDevices();
+	printf("%d devices found!\n", usbDevNum);
+	return 0;
+}
+int pokeys_search_net_connect(int pokeysnum, int specific)
+{
+	sPoKeysNetworkDeviceSummary netDevices[16];
+	printf("Enumerating network devices...\t\t ");
+	netDevNum = PK_EnumerateNetworkDevices(netDevices, 1000);
+	if (netDevNum > 0)
+		{
+		    // Connect to first network device...
+		    sPoKeysDevice * netDevice = PK_ConnectToNetworkDevice(&netDevices[0]);
+		    if (netDevice != NULL)
+		    {
+		        devSerial = netDevice->DeviceData.SerialNumber;
+		        printf("Connection established to network PoKeys device with serial number %d\n", devSerial);
+		        // Do something here...
+		        PK_DisconnectDevice(netDevice);
+		    }
+		    else
+		    {
+		        printf("Connecting to network PoKeys device failed!\n");
+		    }
+
+		}
+		return 0;
+
+}
+//set IO config of connected pokey
+int pokeys_setIO(){
+	return 0;
+}
+//get pinstate in aperpin fashin
+/**
+ * todo implement setting whole pokey at once
+ **/
+int pokeys_pinstate(int pin){
+	return 0;
+}
+//perform an spi read
+int pokeys_spi_read(int * destination){
+	return 0;
+}
+//close connections
+int pokey_close(void){
+	return 0;
+}
+
+
