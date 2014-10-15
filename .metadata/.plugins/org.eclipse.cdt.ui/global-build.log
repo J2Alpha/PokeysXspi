@@ -1,16 +1,5 @@
-03:04:11 **** Rebuild of configuration Debug for project pokeyreader ****
+03:19:44 **** Incremental Build of configuration Debug for project pokeyreader ****
 Info: Internal Builder is used for build
-g++ -std=c++11 -static "-IE:\\Users\\J2Alpha\\code\\pokeysserialiser\\PokeysXspi\\pokeylib\\Debug\\pokeyslib" "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeylib\\pokeyslib" -O0 -g3 -Wall -c -fmessage-length=0 -o piperag.o "..\\piperag.cpp" 
-..\piperag.cpp:15:23: warning: deprecated conversion from string constant to 'LPTSTR {aka char*}' [-Wwrite-strings]
-..\piperag.cpp: In function 'int commencepiping()':
-..\piperag.cpp:43:68: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
-..\piperag.cpp: In function 'int setpipemode(DWORD)':
-..\piperag.cpp:66:79: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
-..\piperag.cpp: In function 'int pipe_stuff(LPTSTR)':
-..\piperag.cpp:74:75: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
-..\piperag.cpp:85:73: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
-..\piperag.cpp: In function 'int pipe_smoke(TCHAR*)':
-..\piperag.cpp:110:74: warning: format '%d' expects argument of type 'int', but argument 2 has type 'DWORD {aka long unsigned int}' [-Wformat]
 g++ -std=c++11 -static "-IE:\\Users\\J2Alpha\\code\\pokeysserialiser\\PokeysXspi\\pokeylib\\Debug\\pokeyslib" "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeylib\\pokeyslib" -O0 -g3 -Wall -c -fmessage-length=0 -o pokeyconfigures.o "..\\pokeyconfigures.cpp" 
 In file included from ..\pokeyconfigures.h:11:0,
                  from ..\pokeyconfigures.cpp:8:
@@ -20,11 +9,5 @@ e:\Users\J2Alpha\code\pokeysserialiser\pokeylib\pokeyslib/PoKeysLib.h:53:0: warn
 ..\pokeyconfigures.cpp: In function 'int pokeys_search_net_connect(int, int)':
 ..\pokeyconfigures.cpp:79:95: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat]
 ..\pokeyconfigures.cpp: In function 'int pokey_close()':
-..\pokeyconfigures.cpp:156:70: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat]
-g++ -std=c++11 -static "-IE:\\Users\\J2Alpha\\code\\pokeysserialiser\\PokeysXspi\\pokeylib\\Debug\\pokeyslib" "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeylib\\pokeyslib" -O0 -g3 -Wall -c -fmessage-length=0 -o pokeyreader.o "..\\pokeyreader.cpp" 
-In file included from ..\pokeyconfigures.h:11:0,
-                 from ..\pokeyreader.h:17,
-                 from ..\pokeyreader.cpp:8:
-e:\Users\J2Alpha\code\pokeysserialiser\pokeylib\pokeyslib/PoKeysLib.h:53:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
-..\pokeyreader.cpp:14:19: warning: deprecated conversion from string constant to 'LPTSTR {aka char*}' [-Wwrite-strings]
+..\pokeyconfigures.cpp:159:70: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat]
 g++ "-Le:\\Users\\J2Alpha\\code\\pokeysserialiser\\PokeysXspi\\pokeylib\\Debug" -o pokeyreader.exe pokeyreader.o pokeyconfigures.o piperag.o -llibpokeylib 

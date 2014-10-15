@@ -141,9 +141,9 @@ int pokeys_spi_read_force(int * destination){
 				value |= (pokeys_pinstate(4) << bit);
 				bit++;
 			}
-		//while(!pokeys_pinstate(1)){
-			//don't wait for high to low on clk? pokey is to slow anyway
-		//}
+		while(!pokeys_pinstate(1)){
+			//wait for high to low?
+		}
 	}
 	if(bit < BITLENGTH){
 		printf("binary not long enough possibly spi too fast, length: %d\n", bit);
