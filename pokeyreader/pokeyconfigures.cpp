@@ -111,11 +111,14 @@ int pokeys_spi_read(int * destination)
 {
 	int value = 0x00000000;
 	int bit = 0;
-	while(!pokeys_pinstate(0))
+	uint8_t pin=0;
+	while(!pokeys_pinstate(CS))
 	{
-		if(pokeys_pinstate(1) && (bit < BITLENGTH))
+
+		if(pokeys_pinstate(SCK) && (bit < BITLENGTH))
 			{
-				value |= (pokeys_pinstate(4) << bit);
+				PK_DigitalIOGetSingle(dev, MOSI, &pin);
+				value |= (pin << bit);
 				bit++;
 			}
 	}
@@ -128,28 +131,32 @@ int pokeys_spi_read(int * destination)
 	*destination = value;
 	return value;
 }
-int pokeys_spi_read_force(int * destination){
-	int value = 0x00000000;
+int pokeys_spi_read_force(unsigned int * destination){
+	unsigned int value = 0x00000000;
 	int bit = 0;
+	uint8_t pin=0;
+	uint8_t sckpin=0;
 	while(pokeys_pinstate(CS)){
 		//wait for cs to go low
 	}
-	while(!pokeys_pinstate(0))
+	while(!pokeys_pinstate(CS))
 	{
-		if(pokeys_pinstate(1) && (bit < BITLENGTH))
+
+		if(pokeys_pinstate(SCK) && (bit < BITLENGTH))
 			{
-				value |= (pokeys_pinstate(4) << bit);
+				PK_DigitalIOGetSingle(dev, MOSI, &pin);
+				if(pin){value |= (1 << bit);}
 				bit++;
 			}
-		//while(!pokeys_pinstate(1)){
-			//don't wait for high to low on clk? pokey is to slow anyway
-		//}
+		while(sckpin){
+			PK_DigitalIOGetSingle(dev,SCK,  &sckpin);
+		}
 	}
-	if(bit < BITLENGTH){
+	if(bit < BITLENGTH-1){
 		printf("binary not long enough possibly spi too fast, length: %d\n", bit);
 		return 0;
 	}
-	printf("read from spi ok: %d\n", value);
+	printf("read from spi ok: %u \n", value);
 	*destination = value;
 	return value;
 }

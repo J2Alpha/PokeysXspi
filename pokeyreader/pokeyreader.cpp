@@ -32,7 +32,7 @@ int main(int argc, TCHAR *argv[]){
 	//check cs, do a read
 	for(unsigned int i=0;i<20;i++){
 		printf("<spi try %d>\n", i+1);
-		int target =0;
+		unsigned int target =0;
 		pokeys_spi_read_force(&target);
 	}
 	printf("\n<End of message, press ENTER to terminate connection and exit>");

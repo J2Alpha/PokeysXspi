@@ -46,7 +46,7 @@ int pokeys_pinstate(int pin);
 //perform an spi read
 int pokeys_spi_read(int * destination);
 //perform read but force waiting
-int pokeys_spi_read_force(int * destination);
+int pokeys_spi_read_force(unsigned int * destination);
 //close connections
 int pokey_close(void);
 
