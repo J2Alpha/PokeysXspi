@@ -27,7 +27,7 @@
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1170459195" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.636587818" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.so.debug.1196839215" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.so.debug">
+							<tool command="g++" id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.so.debug.1196839215" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.so.debug">
 								<option id="gnu.cpp.compiler.mingw.so.debug.option.optimization.level.147783332" name="Optimization Level" superClass="gnu.cpp.compiler.mingw.so.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.mingw.so.debug.option.debugging.level.2084071570" name="Debug Level" superClass="gnu.cpp.compiler.mingw.so.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1402091748" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
@@ -61,8 +61,8 @@
 									<listOptionValue builtIn="false" value="&quot;e:\Users\J2Alpha\code\pokeysserialiser\pokeysspi\XPSDK213\SDK\Libraries\Win&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.341125562" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
-									<listOptionValue builtIn="false" value="XPLM_64"/>
-									<listOptionValue builtIn="false" value="XPWidgets_64"/>
+									<listOptionValue builtIn="false" value="XPLM"/>
+									<listOptionValue builtIn="false" value="XPWidgets"/>
 								</option>
 								<option id="gnu.cpp.link.option.flags.1975682205" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="" valueType="string"/>
 								<option id="gnu.cpp.link.option.other.1092693599" name="Other options (-Xlinker [option])" superClass="gnu.cpp.link.option.other" valueType="stringList">

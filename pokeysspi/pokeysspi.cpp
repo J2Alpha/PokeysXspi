@@ -25,12 +25,17 @@
 #include "XPLMDataAccess.h"
 #include "XPLMProcessing.h"
 
-//pokeylib header?
-//#include "PoKeysLib.h"
+#define DllImport   __declspec( dllimport )
+
 //other headers
 #include "pokeysspi.h"
 //pipe stuff
-//#include "bagpipes.h"
+
+//DllImport XPLM_API void XPLMRegisterFlightLoopCallback(
+       // XPLMFlightLoop_f     inFlightLoop,
+       // float                inInterval,
+      //  void *               inRefcon);
+
 float SerialPortAccessCB(float elapsedMe, float elapsedSim, int counter, void *refcon);
 void SerialPortAccessCallback(XPLMWindowID inWindowID, void *inRefcon);
 
@@ -82,8 +87,8 @@ PLUGIN_API int XPluginStart ( char * outName, char * outSignature, char * outDes
 	strcpy(outDescription, DESCRIPTION);
 	//this is where it goes wrong with me, I get:
 	//pokeysspi.cpp:67: undefined reference to `_imp__XPLMRegisterFlightLoopCallback'
-	XPLMFlightLoop_f flf=&SerialPortAccessCB;
-	XPLMRegisterFlightLoopCallback(flf, 1.0, NULL);
+	//XPLMFlightLoop_f flf=&SerialPortAccessCB;
+	XPLMRegisterFlightLoopCallback(SerialPortAccessCB, 1.0, NULL);
 	return 1;
 
 }
