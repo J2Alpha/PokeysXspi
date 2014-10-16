@@ -1,1 +1,4 @@
-Info: Nothing to build for pokeysspi
+20:53:58 **** Incremental Build of configuration Debug for project pokeysspi ****
+Info: Internal Builder is used for build
+g++ -static -o win.xpl pokeysspi.o -lXPLM -lXPWidgets "-Le:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\Libraries\\Win" -Xlinker --export-all-symbols -shared 
+cp "E:\\Users\\J2Alpha\\code\\pokeysserialiser\\PokeysXspi\\pokeysspi\\Debug\\win.xpl" "D:\\X-Plane 10 Demo\\Resources\\plugins\\serialplugin\\32" 

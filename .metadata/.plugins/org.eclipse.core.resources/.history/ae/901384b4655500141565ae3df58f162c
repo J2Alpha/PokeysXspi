@@ -31,7 +31,6 @@
 #include "pokeysspi.h"
 //pipe stuff
 
-
 //DllImport XPLM_API void XPLMRegisterFlightLoopCallback(
        // XPLMFlightLoop_f     inFlightLoop,
        // float                inInterval,
@@ -44,7 +43,8 @@ bool CommsEnabled;
 HANDLE hComms;
 DWORD dwRetFlag;
 
-char debugloopback=0;
+
+
 unsigned short com0;
 unsigned short com1;
 
@@ -69,12 +69,6 @@ float SerialPortAccessCB(float elapsedMe, float elapsedSim, int counter, void * 
 	char inbuf[4]={0,0,0,0};
 	//send trigger
 	SendToComPort(strlen(outbuf), (unsigned char *) outbuf);//
-	if(debugloopback)//jumper rx to tx first
-	{
-		SendToComPort(strlen(outbuf), (unsigned char *) outbuf);//
-		SendToComPort(strlen(outbuf), (unsigned char *) outbuf);//
-		SendToComPort(strlen(outbuf), (unsigned char *) outbuf);//
-	}
 	//receive 4 8bit sections
 	ReceiveFromComPort(inbuf);
 	//transform it back to 2 16 bit values
