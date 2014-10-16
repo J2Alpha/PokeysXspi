@@ -17,24 +17,34 @@
 #include <tchar.h>
 //#include <strsafe.h>  we are not using win sdk if it can be helped!
 //xplane sdk plugin headers
+
 #include "XPLMDefs.h"
 #include "XPLMDisplay.h"
 #include "XPLMUtilities.h"
 #include "XPLMCamera.h"
 #include "XPLMDataAccess.h"
+#include "XPLMProcessing.h"
+
 //pokeylib header?
-#include "PoKeysLib.h"
+//#include "PoKeysLib.h"
 //other headers
 #include "pokeysspi.h"
 //pipe stuff
-#include "bagpipes.h"
+//#include "bagpipes.h"
+float SerialPortAccessCB(float elapsedMe, float elapsedSim, int counter, void *refcon);
+void SerialPortAccessCallback(XPLMWindowID inWindowID, void *inRefcon);
 
+bool CommsEnabled;
+HANDLE hComms;
+DWORD dwRetFlag;
+
+
+
+unsigned short com0;
+unsigned short com1;
 
 #if IBM
-BOOL APIENTRY DllMain( HANDLE hModule,
-                       DWORD  ul_reason_for_call,
-                       LPVOID lpReserved
-                     )
+BOOL APIENTRY DllMain( HANDLE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
     switch (ul_reason_for_call)
     {
@@ -48,11 +58,34 @@ BOOL APIENTRY DllMain( HANDLE hModule,
 }
 #endif //IBM
 
+float SerialPortAccessCB(float elapsedMe, float elapsedSim, int counter, void * refcon)
+{
+	char outbuf[1]={'B'};
+	char inbuf[4]={0,0,0,0};
+	//send trigger
+	SendToComPort(strlen(outbuf), (unsigned char *) outbuf);//
+	//receive 4 8bit sections
+	ReceiveFromComPort(inbuf);
+	//transform it back to 2 16 bit values
+	com0=((((unsigned short)inbuf[1])<<8) | inbuf[0]);
+	com1=((((unsigned short)inbuf[3])<<8) | inbuf[2]);
+	// now these have the positions of the 2 qdecs
+	//todo translate this to the right range, it depends on what you want to set I think?
+	//todo then tell xplane where it goes this using a dataref?
+
+    return 0.01;
+}
+
 PLUGIN_API int XPluginStart ( char * outName, char * outSignature, char * outDescription ){
 	strcpy(outName, NAME);
 	strcpy(outSignature, ID);
 	strcpy(outDescription, DESCRIPTION);
+	//this is where it goes wrong with me, I get:
+	//pokeysspi.cpp:67: undefined reference to `_imp__XPLMRegisterFlightLoopCallback'
+	XPLMFlightLoop_f flf=&SerialPortAccessCB;
+	XPLMRegisterFlightLoopCallback(flf, 1.0, NULL);
 	return 1;
+
 }
 PLUGIN_API void	XPluginStop(void)
 {
@@ -61,89 +94,171 @@ PLUGIN_API void	XPluginStop(void)
 
 PLUGIN_API void XPluginDisable(void)
 {
+	CloseComms();
 }
 
 PLUGIN_API int XPluginEnable(void)
 {
-	BOOL   fConnected = FALSE;
-	DWORD  dwThreadId = 0;
-	HANDLE hPipe = INVALID_HANDLE_VALUE, hThread = NULL;
-	LPTSTR lpszPipename = TEXT("\\\\.\\pipe\\mynamedpipe");
 
-	// The main loop creates an instance of the named pipe and
-	// then waits for a client to connect to it. When the client
-	// connects, a thread is created to handle communications
-	// with that client, and this loop is free to wait for the
-	// next client connect request. It is an infinite loop.
-
-	for (;;)
-	{
-	  _tprintf( TEXT("\nPipe Server: Main thread awaiting client connection on %s\n"), lpszPipename);
-	  hPipe = CreateNamedPipe(
-		  lpszPipename,             // pipe name
-		  PIPE_ACCESS_DUPLEX,       // read/write access
-		  PIPE_TYPE_MESSAGE |       // message type pipe
-		  PIPE_READMODE_MESSAGE |   // message-read mode
-		  PIPE_WAIT,                // blocking mode
-		  PIPE_UNLIMITED_INSTANCES, // max. instances
-		  BUFSIZE,                  // output buffer size
-		  BUFSIZE,                  // input buffer size
-		  0,                        // client time-out
-		  NULL);                    // default security attribute
-
-	  if (hPipe == INVALID_HANDLE_VALUE)
-	  {
-		  _tprintf(TEXT("CreateNamedPipe failed, GLE=%d.\n"), GetLastError());
-		  return -1;
-	  }
-	  /**** start client here
-	   *
-	   */
-	  // Wait for the client to connect; if it succeeds,
-	  // the function returns a nonzero value. If the function
-	  // returns zero, GetLastError returns ERROR_PIPE_CONNECTED.
-
-	  fConnected = ConnectNamedPipe(hPipe, NULL) ?
-		 TRUE : (GetLastError() == ERROR_PIPE_CONNECTED);
-
-	  if (fConnected)
-	  {
-		 printf("Client connected, creating a processing thread.\n");
-
-		 // Create a thread for this client.
-		 hThread = CreateThread(
-			NULL,              // no security attribute
-			0,                 // default stack size
-			InstanceThread,    // thread proc
-			(LPVOID) hPipe,    // thread parameter
-			0,                 // not suspended
-			&dwThreadId);      // returns thread ID
-
-		 if (hThread == NULL)
-		 {
-			_tprintf(TEXT("CreateThread failed, GLE=%d.\n"), GetLastError());
-			return -1;
-		 }
-		 else CloseHandle(hThread);
-	   }
-	  else
-		// The client could not connect, so close the pipe.
-		 CloseHandle(hPipe);
-	}
-
-	return 0;
+	OpenComms();
+	return 1;
 }
 
 PLUGIN_API void XPluginReceiveMessage(XPLMPluginID	inFromWho, long	inMessage,void * inParam)
 {
+
 }
 
-void	MyHotKeyCallback(void * inRefcon)
+
+
+/*void GetLatestDataRefs(void)
 {
-	/* This is our hot key handler.  Note that we don't know what key stroke
-	 * was pressed!  We can identify our hot key by the 'refcon' value though.
-	 * This is because our hot key could have been remapped by the user and we
-	 * wouldn't know it. */
-	//XPLMSpeakString("Hello World!");
+    float FloatValue[MAX_ITEMS];
+    char Buffer[512];
+    int Item;
+
+    for (Item=0; Item<MAX_ITEMS; Item++)
+    {
+        FloatValue[Item] = XPLMGetDataf(gPositionDataRef[Item]);
+        sprintf(Buffer, "%f\n\r", FloatValue[Item]);
+        SendToComPort(strlen(Buffer), (unsigned char *)Buffer);
+    }
+}*/
+
+//---------------------------------------------------------------------------
+void OpenComms(void)
+{
+    DCB Dcb;
+    COMMTIMEOUTS CommTimeouts;
+    char ErrorString[80];
+    char *PortString = "\\\\.\\COMx";
+
+    if (hComms == 0)
+    {
+        //PortString[7] = (char) 4 + 48;
+    	//TCHAR *pcCommPort = TEXT("COM4");
+        hComms = CreateFile("\\\\.\\COM4",
+                            GENERIC_READ | GENERIC_WRITE,
+                            0,
+                            NULL,
+                            OPEN_EXISTING,
+                            FILE_ATTRIBUTE_NORMAL | FILE_FLAG_RANDOM_ACCESS,
+                            NULL);
+
+        if (hComms == INVALID_HANDLE_VALUE)
+        {
+            sprintf(ErrorString, "CreateFile Error = %d", GetLastError());
+            ShowMessage(ErrorString);
+        }
+        else
+        {
+            dwRetFlag = GetCommState(hComms, &Dcb);
+
+            if (!dwRetFlag)
+            {
+                sprintf(ErrorString, "GetCommState Error = %d", GetLastError());
+                ShowMessage(ErrorString);
+            }
+
+            Dcb.DCBlength = sizeof(Dcb);
+
+            Dcb.BaudRate = CBR_57600;
+
+            Dcb.ByteSize = 8;
+            Dcb.Parity = NOPARITY;
+            Dcb.StopBits = ONESTOPBIT;
+            Dcb.fTXContinueOnXoff = TRUE;
+
+            Dcb.fOutxCtsFlow = FALSE;//TRUE;                  // disable CTS output flow control
+            Dcb.fOutxDsrFlow = FALSE;                  // disable DSR output flow control
+            Dcb.fDtrControl = DTR_CONTROL_HANDSHAKE  /*DTR_CONTROL_DISABLE DTR_CONTROL_ENABLE*/;
+            Dcb.fDsrSensitivity = FALSE;               // enable DSR sensitivity
+
+            Dcb.fOutX = FALSE;                        // disable XON/XOFF out flow control
+            Dcb.fInX = FALSE;                         // disable XON/XOFF in flow control
+            Dcb.fErrorChar = FALSE;                   // disable error replacement
+            Dcb.fNull = FALSE;                        // disable null stripping
+            Dcb.fRtsControl = RTS_CONTROL_HANDSHAKE /* RTS_CONTROL_ENABLE  RTS_CONTROL_DISABLE*/;   //  enable RTS line
+            Dcb.fAbortOnError = TRUE;                 // don't abort reads/writes on error
+
+            dwRetFlag = SetCommState(hComms, &Dcb);
+            if (!dwRetFlag)
+            {
+                sprintf(ErrorString, "SetCommState Error = %d", GetLastError());
+                ShowMessage(ErrorString);
+            }
+
+            dwRetFlag = GetCommTimeouts(hComms, &CommTimeouts);
+            if (!dwRetFlag)
+            {
+                sprintf(ErrorString, "GetCommTimeouts Error = %d", GetLastError());
+                ShowMessage(ErrorString);
+            }
+
+            CommTimeouts.ReadIntervalTimeout         = 50;    //Don't use interval timeouts
+            CommTimeouts.ReadTotalTimeoutMultiplier  = 50;    //Don't use multipliers
+            CommTimeouts.ReadTotalTimeoutConstant    = 50;    //150ms total read timeout
+            CommTimeouts.WriteTotalTimeoutMultiplier = 5;//Don't use multipliers
+            CommTimeouts.WriteTotalTimeoutConstant      = 5;//2200ms total write timeout
+
+            dwRetFlag = SetCommTimeouts(hComms, &CommTimeouts);
+            if (!dwRetFlag)
+            {
+                sprintf(ErrorString, "SetCommTimeouts Error = %d", GetLastError());
+                ShowMessage(ErrorString);
+            }
+        }
+    }
+    else
+    {
+        ShowMessage("Comm port already open");
+    }
+}
+//---------------------------------------------------------------------------
+
+void CloseComms(void)
+{
+    if (hComms != 0)
+    {
+        CloseHandle(hComms);
+        hComms = 0;
+    }
+    else
+    {
+        ShowMessage("Comm port already closed");
+    }
+}
+//---------------------------------------------------------------------------
+
+void SendToComPort(DWORD ResponseLength, unsigned char *Buffer)
+{
+    DWORD dwBytesWritten;
+
+    if (hComms != 0)
+        dwRetFlag = WriteFile(hComms, Buffer, ResponseLength, &dwBytesWritten, NULL);
+    else
+    {
+        ShowMessage("Comm port not open");
+    }
+}
+//---------------------------------------------------------------------------
+void ReceiveFromComPort(char *Buffer)
+{
+    DWORD dwBytesRead = 0;
+
+    if (hComms != 0)
+    {
+        while (dwBytesRead == 0)
+            dwRetFlag = ReadFile(hComms, Buffer, sizeof(Buffer), &dwBytesRead, NULL);
+    }
+    else
+    {
+        ShowMessage("Comm port not open");
+    }
+}
+//---------------------------------------------------------------------------
+void ShowMessage(char *pErrorString)
+{
+    MessageBox(NULL, pErrorString, "Error", MB_OK);
 }
 

@@ -1,3 +1,22 @@
-06:35:49 **** Incremental Build of configuration Debug for project pokeyreader ****
+02:07:00 **** Incremental Build of configuration Debug for project pokeysspi ****
 Info: Internal Builder is used for build
-g++ "-Le:\\Users\\J2Alpha\\code\\pokeysserialiser\\PokeysXspi\\pokeylib\\Debug" -o pokeyreader.exe pokeyreader.o pokeyconfigures.o piperag.o -llibpokeylib 
+g++ "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\CHeaders\\XPLM" "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\CHeaders\\Wrappers" "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\CHeaders\\Widgets" -O0 -g3 -Wall -c -fmessage-length=0 -o pokeysspi.o "..\\pokeysspi.cpp" 
+..\pokeysspi.cpp: In function 'void OpenComms()':
+..\pokeysspi.cpp:134:24: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+..\pokeysspi.cpp:150:73: warning: format '%d' expects argument of type 'int', but argument 3 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:159:79: warning: format '%d' expects argument of type 'int', but argument 3 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:187:79: warning: format '%d' expects argument of type 'int', but argument 3 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:194:82: warning: format '%d' expects argument of type 'int', but argument 3 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:207:82: warning: format '%d' expects argument of type 'int', but argument 3 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:214:45: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+..\pokeysspi.cpp:134:11: warning: unused variable 'PortString' [-Wunused-variable]
+..\pokeysspi.cpp: In function 'void CloseComms()':
+..\pokeysspi.cpp:228:47: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+..\pokeysspi.cpp: In function 'void SendToComPort(DWORD, unsigned char*)':
+..\pokeysspi.cpp:241:41: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+..\pokeysspi.cpp: In function 'void ReceiveFromComPort(char*)':
+..\pokeysspi.cpp:256:41: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+g++ -static -o libpokeysspi.xpl pokeysspi.o -lXPLM_64 -lXPWidgets_64 "-Le:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\Libraries\\Win" -Xlinker --export-all-symbols -shared 
+pokeysspi.o: In function `XPluginStart':
+E:\Users\J2Alpha\code\pokeysserialiser\PokeysXspi\pokeysspi\Debug/../pokeysspi.cpp:86: undefined reference to `_imp__XPLMRegisterFlightLoopCallback'
+collect2.exe: error: ld returned 1 exit status

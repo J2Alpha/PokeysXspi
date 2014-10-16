@@ -32,6 +32,19 @@ BOOL APIENTRY DllMain( HANDLE hModule,
   - 0 if it did not.
 */
 #endif //IBM
+void OpenComms(void);
+//close port
+void CloseComms(void);
+//send chars
+void SendToComPort(DWORD ResponseLength, unsigned char *Buffer);
+//get chars
+void ReceiveFromComPort(char *Buffer);
+//push a message to xplane
+void ShowMessage(char *pErrorString);
+//comport callback
+
+
+//standerd xplane things
 PLUGIN_API int XPluginStart ( char * outName, char * outSignature, char * outDescription );
 /*XPluginStop
 description:

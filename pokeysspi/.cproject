@@ -21,7 +21,7 @@
 				<configuration artifactExtension="xpl" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.sharedLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.sharedLib" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.so.debug.1850279641" name="Debug" parent="cdt.managedbuild.config.gnu.mingw.so.debug">
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.so.debug.1850279641." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.so.debug.1905660432" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.so.debug">
-							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.so.debug.1722341835" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.so.debug"/>
+							<targetPlatform binaryParser="org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.mingw.so.debug.1722341835" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.so.debug"/>
 							<builder buildPath="${workspace_loc:/pokeysspi}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.2125674799" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.so.debug.58837718" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.so.debug">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1170459195" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
@@ -35,6 +35,7 @@
 									<listOptionValue builtIn="false" value="&quot;e:\Users\J2Alpha\code\pokeysserialiser\pokeysspi\XPSDK213\SDK\CHeaders\Wrappers&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;e:\Users\J2Alpha\code\pokeysserialiser\pokeysspi\XPSDK213\SDK\CHeaders\Widgets&quot;"/>
 								</option>
+								<option id="gnu.cpp.compiler.option.other.verbose.1174441468" name="Verbose (-v)" superClass="gnu.cpp.compiler.option.other.verbose" value="false" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.732973598" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.so.debug.1804422557" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.so.debug">
@@ -48,20 +49,24 @@
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1850094821" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="IBM"/>
 								</option>
+								<option id="gnu.c.compiler.option.misc.verbose.412942766" name="Verbose (-v)" superClass="gnu.c.compiler.option.misc.verbose" value="false" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1569326939" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.so.debug.288422251" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.so.debug">
 								<option defaultValue="true" id="gnu.c.link.mingw.so.debug.option.shared.1533605873" name="Shared (-shared)" superClass="gnu.c.link.mingw.so.debug.option.shared" valueType="boolean"/>
 							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.debug.729992555" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.debug">
+							<tool command="g++ -static" commandLinePattern="${COMMAND} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS} ${FLAGS}" id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.debug.729992555" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.so.debug">
 								<option defaultValue="true" id="gnu.cpp.link.mingw.so.debug.option.shared.1987471859" name="Shared (-shared)" superClass="gnu.cpp.link.mingw.so.debug.option.shared" valueType="boolean"/>
 								<option id="gnu.cpp.link.option.paths.1220403379" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;e:\Users\J2Alpha\code\pokeysserialiser\pokeysspi\XPSDK213\SDK\Libraries\Win&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.341125562" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
-									<listOptionValue builtIn="false" value="XPWidgets_64"/>
 									<listOptionValue builtIn="false" value="XPLM_64"/>
-									<listOptionValue builtIn="false" value="libpokeylib"/>
+									<listOptionValue builtIn="false" value="XPWidgets_64"/>
+								</option>
+								<option id="gnu.cpp.link.option.flags.1975682205" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="" valueType="string"/>
+								<option id="gnu.cpp.link.option.other.1092693599" name="Other options (-Xlinker [option])" superClass="gnu.cpp.link.option.other" valueType="stringList">
+									<listOptionValue builtIn="false" value="--export-all-symbols"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1607549716" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -97,7 +102,7 @@
 				<configuration artifactExtension="dll" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.sharedLib" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.sharedLib" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.mingw.so.release.1308178656" name="Release" parent="cdt.managedbuild.config.gnu.mingw.so.release">
 					<folderInfo id="cdt.managedbuild.config.gnu.mingw.so.release.1308178656." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.so.release.1093680906" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.so.release">
-							<targetPlatform id="cdt.managedbuild.target.gnu.platform.mingw.so.release.1221927554" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.so.release"/>
+							<targetPlatform binaryParser="org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.mingw.so.release.1221927554" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.mingw.so.release"/>
 							<builder buildPath="${workspace_loc:/pokeysspi}/Release" id="cdt.managedbuild.tool.gnu.builder.mingw.base.1609054578" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.so.release.1623816472" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.so.release">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1191226215" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
