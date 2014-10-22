@@ -1,0 +1,592 @@
+19:08:26 **** Incremental Build of configuration Debug for project Vjoyinterface ****
+Info: Internal Builder is used for build
+g++ "-IE:\\WinDDK\\7600.16385.1\\inc\\api" -O0 -g3 -Wall -c -fmessage-length=0 -o vJoyClient.o "..\\vJoyClient.cpp" 
+In file included from E:\WinDDK\7600.16385.1\inc\api/windef.h:177:0,
+                 from c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/excpt.h:20,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:151,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:851:2: error: #error Must define a target architecture.
+In file included from E:\WinDDK\7600.16385.1\inc\api/windef.h:177:0,
+                 from c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/excpt.h:20,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:151,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:1202:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+In file included from E:\WinDDK\7600.16385.1\inc\api/windef.h:177:0,
+                 from c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/excpt.h:20,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:151,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:12880:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:13305:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+In file included from E:\WinDDK\7600.16385.1\inc\api/windows.h:156:0,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winbase.h:2936:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+E:\WinDDK\7600.16385.1\inc\api/winbase.h:2939:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+E:\WinDDK\7600.16385.1\inc\api/winbase.h:2942:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+E:\WinDDK\7600.16385.1\inc\api/winbase.h:3054:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+E:\WinDDK\7600.16385.1\inc\api/winbase.h:3057:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+E:\WinDDK\7600.16385.1\inc\api/winbase.h:3060:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+E:\WinDDK\7600.16385.1\inc\api/winbase.h:3063:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+In file included from E:\WinDDK\7600.16385.1\inc\api/windows.h:157:0,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/wingdi.h:4685:0: warning: ignoring #pragma deprecated  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/wingdi.h:4686:0: warning: ignoring #pragma deprecated  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/windows.h:158:0,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winuser.h:3183:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+In file included from E:\WinDDK\7600.16385.1\inc\api/windows.h:167:0,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winreg.h:1243:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+E:\WinDDK\7600.16385.1\inc\api/winreg.h:1257:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+In file included from E:\WinDDK\7600.16385.1\inc\api/windows.h:180:0,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/mmsystem.h:33:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/windows.h:184:0,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/shellapi.h:666:1: warning: multi-line comment [-Wcomment]
+In file included from E:\WinDDK\7600.16385.1\inc\api/winscard.h:30:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:192,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/wtypes.h:17:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/winscard.h:31:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:192,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:1315:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:1316:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:1379:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:1464:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:1465:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:1466:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:1467:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:1526:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/winscard.h:31:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:192,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:4366:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:4395:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:5439:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:5461:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:5854:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/winioctl.h:5903:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/objbase.h:439:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/wtypes.h:17:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/objbase.h:440:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/unknwn.h:17:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/objbase.h:441:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/objidl.h:17:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/objbase.h:441:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/objidl.h:5276:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/objidl.h:5292:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/objbase.h:865:1: error: pasting "(" and "__drv_nop" does not give a valid preprocessing token
+In file included from E:\WinDDK\7600.16385.1\inc\api/objbase.h:1008:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/urlmon.h:17:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/msxml.h:284:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/urlmon.h:355,
+                 from E:\WinDDK\7600.16385.1\inc\api/objbase.h:1008,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/oaidl.h:445:1: error: pasting "/" and "/" does not give a valid preprocessing token
+E:\WinDDK\7600.16385.1\inc\api/oaidl.h:460:1: error: pasting "/" and "/" does not give a valid preprocessing token
+In file included from E:\WinDDK\7600.16385.1\inc\api/objbase.h:1008:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/urlmon.h:376:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/objbase.h:1009:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/propidl.h:17:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/objbase.h:1009:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/propidl.h:1258:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/propidl.h:1259:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/oleauto.h:57:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:38,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/oaidl.h:17:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/ole2.h:95:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/oleidl.h:17:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/windows.h:208:0,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/stralign.h:107:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/stralign.h:108:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/stralign.h:109:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/stralign.h:114:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+In file included from ..\stdafx.h:15:0,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:371:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:373:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:376:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:377:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:378:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:379:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1555:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1556:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1558:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2161:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2162:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2164:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3992:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3993:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3995:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8655:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8656:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8657:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8658:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8712:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8714:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8715:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8731:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8734:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8735:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8736:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8760:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8762:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8763:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8779:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8782:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8783:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8784:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8808:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8836:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8837:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8838:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8873:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8901:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8902:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8903:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8938:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:9041:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:9042:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:9044:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:9157:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:9158:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:9160:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:9855:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+..\vJoyClient.cpp:12:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+In file included from E:\WinDDK\7600.16385.1\inc\api/windef.h:177:0,
+                 from c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/excpt.h:20,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:151,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:366:9: error: '__possibly_notnullterminated' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:367:9: error: '__possibly_notnullterminated' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:368:9: error: '__possibly_notnullterminated' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:369:9: error: '__possibly_notnullterminated' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:430:9: error: '__possibly_notnullterminated' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:431:9: error: '__possibly_notnullterminated' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:475:9: error: 'PNZCH' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:476:9: error: 'PCNZCH' does not name a type
+In file included from E:\WinDDK\7600.16385.1\inc\api/windef.h:177:0,
+                 from c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/excpt.h:20,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:151,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:1203:1: error: 'EXCEPTION_DISPOSITION' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:1212:9: error: 'EXCEPTION_ROUTINE' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:2235:1: error: array bound is not an integer constant before ']' token
+In file included from E:\WinDDK\7600.16385.1\inc\api/windef.h:177:0,
+                 from c:\mingw\bin\../lib/gcc/mingw32/4.7.2/../../../../include/excpt.h:20,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:151,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winnt.h: In function 'void TpInitializeCallbackEnviron(PTP_CALLBACK_ENVIRON)':
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:14781:33: error: expected primary-expression before ';' token
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:14782:41: error: expected primary-expression before ';' token
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:14783:55: error: expected primary-expression before ';' token
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:14784:36: error: expected primary-expression before ';' token
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:14785:46: error: expected primary-expression before ';' token
+E:\WinDDK\7600.16385.1\inc\api/winnt.h:14786:49: error: expected primary-expression before ';' token
+In file included from E:\WinDDK\7600.16385.1\inc\api/windows.h:160:0,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/winnls.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/winnls.h:1381:28: error: 'PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/winnls.h:1383:28: error: 'PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/winnls.h:1392:28: error: 'PCNZWCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/winnls.h:1394:28: error: 'PCNZWCH' has not been declared
+In file included from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/objbase.h: In function 'void** IID_PPV_ARGS_Helper(T**)':
+E:\WinDDK\7600.16385.1\inc\api/objbase.h:239:21: error: expected type-specifier before 'IUnknown'
+E:\WinDDK\7600.16385.1\inc\api/objbase.h:239:21: error: expected '>' before 'IUnknown'
+E:\WinDDK\7600.16385.1\inc\api/objbase.h:239:21: error: expected '(' before 'IUnknown'
+E:\WinDDK\7600.16385.1\inc\api/objbase.h:239:21: error: 'IUnknown' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/objbase.h:239:30: error: expected primary-expression before '>' token
+E:\WinDDK\7600.16385.1\inc\api/objbase.h:239:36: error: expected ')' before ';' token
+In file included from E:\WinDDK\7600.16385.1\inc\api/msxml.h:284:0,
+                 from E:\WinDDK\7600.16385.1\inc\api/urlmon.h:355,
+                 from E:\WinDDK\7600.16385.1\inc\api/objbase.h:1008,
+                 from E:\WinDDK\7600.16385.1\inc\api/ole2.h:37,
+                 from E:\WinDDK\7600.16385.1\inc\api/windows.h:201,
+                 from ..\stdafx.h:11,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/oaidl.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/oaidl.h:445:1: error: expected unqualified-id before '/' token
+E:\WinDDK\7600.16385.1\inc\api/oaidl.h:460:1: error: expected unqualified-id before '/' token
+In file included from ..\stdafx.h:15:0,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:164:9: error: '__possibly_notnullterminated' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:165:9: error: '__possibly_notnullterminated' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:166:9: error: '__possibly_notnullterminated' does not name a type
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:173:10: error: 'StringLengthWorkerA' declared as an 'inline' variable
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:173:10: warning: '__stdcall__' attribute only applies to function types [-Wattributes]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:173:10: error: 'STRSAFE_PCNZCH' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:174:49: error: expected primary-expression before 'cchMax'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:175:50: error: expected primary-expression before '*' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:175:52: error: 'pcchLength' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:175:62: error: expression list treated as compound expression in initializer [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:179:10: error: 'StringLengthWorkerW' declared as an 'inline' variable
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:179:10: warning: '__stdcall__' attribute only applies to function types [-Wattributes]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:179:10: error: 'STRSAFE_PCNZWCH' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:180:49: error: expected primary-expression before 'cchMax'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:181:50: error: expected primary-expression before '*' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:181:52: error: 'pcchLength' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:181:62: error: expression list treated as compound expression in initializer [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:207:30: error: 'StringValidateDestA' declared as an 'inline' variable
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:207:30: warning: '__stdcall__' attribute only applies to function types [-Wattributes]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:207:30: error: 'STRSAFE_PCNZCH' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:208:17: error: expected primary-expression before 'cchDest'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:209:10: error: expected primary-expression before 'const'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:209:29: error: expression list treated as compound expression in initializer [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:220:30: error: 'StringValidateDestW' declared as an 'inline' variable
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:220:30: warning: '__stdcall__' attribute only applies to function types [-Wattributes]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:220:30: error: 'STRSAFE_PCNZWCH' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:221:17: error: expected primary-expression before 'cchDest'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:222:10: error: expected primary-expression before 'const'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:222:29: error: expression list treated as compound expression in initializer [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:233:30: error: 'StringExValidateDestA' declared as an 'inline' variable
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:233:30: warning: '__stdcall__' attribute only applies to function types [-Wattributes]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:233:30: error: 'STRSAFE_PCNZCH' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:234:17: error: expected primary-expression before 'cchDest'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:235:10: error: expected primary-expression before 'const'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:236:16: error: expected primary-expression before 'dwFlags'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:236:23: error: expression list treated as compound expression in initializer [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:248:30: error: 'StringExValidateDestW' declared as an 'inline' variable
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:248:30: warning: '__stdcall__' attribute only applies to function types [-Wattributes]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:248:30: error: 'STRSAFE_PCNZWCH' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:249:17: error: expected primary-expression before 'cchDest'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:250:10: error: expected primary-expression before 'const'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:251:16: error: expected primary-expression before 'dwFlags'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:251:23: error: expression list treated as compound expression in initializer [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:266:28: error: 'STRSAFE_PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:274:28: error: 'STRSAFE_PCNZWCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCopyA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:466:63: error: 'StringValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:472:36: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCopyW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:488:63: error: 'StringValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:494:36: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCopyA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:586:63: error: 'StringValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:592:36: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCopyW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:609:63: error: 'StringValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:615:36: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCopyExA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR, char**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:735:74: error: 'StringExValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:742:48: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:760:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:778:58: error: invalid conversion from 'STRSAFE_LPCSTR {aka const char*}' to 'int' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:262:1: error:   initializing argument 4 of 'HRESULT StringCopyWorkerA(STRSAFE_LPSTR, size_t, size_t*, int, size_t)' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCopyExW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR, wchar_t**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:851:74: error: 'StringExValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:858:48: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:876:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:894:58: error: invalid conversion from 'STRSAFE_LPCWSTR {aka const wchar_t*}' to 'int' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:270:1: error:   initializing argument 4 of 'HRESULT StringCopyWorkerW(STRSAFE_LPWSTR, size_t, size_t*, int, size_t)' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCopyExA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR, char**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1069:74: error: 'StringExValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1076:48: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1094:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1112:58: error: invalid conversion from 'STRSAFE_LPCSTR {aka const char*}' to 'int' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:262:1: error:   initializing argument 4 of 'HRESULT StringCopyWorkerA(STRSAFE_LPSTR, size_t, size_t*, int, size_t)' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCopyExW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR, wchar_t**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1182:74: error: 'StringExValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1189:48: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1207:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1225:58: error: invalid conversion from 'STRSAFE_LPCWSTR {aka const wchar_t*}' to 'int' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:270:1: error:   initializing argument 4 of 'HRESULT StringCopyWorkerW(STRSAFE_LPWSTR, size_t, size_t*, int, size_t)' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1362:28: error: 'STRSAFE_PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCopyNA(STRSAFE_LPSTR, size_t, int, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1367:63: error: 'StringValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1381:40: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1394:28: error: 'STRSAFE_PCNZWCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCopyNW(STRSAFE_LPWSTR, size_t, int, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1399:63: error: 'StringValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1413:40: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1503:27: error: 'STRSAFE_PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCopyNA(STRSAFE_LPSTR, size_t, int, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1509:63: error: 'StringValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1525:40: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1538:27: error: 'STRSAFE_PCNZWCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCopyNW(STRSAFE_LPWSTR, size_t, int, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1544:63: error: 'StringValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1564:40: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1687:28: error: 'STRSAFE_PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCopyNExA(STRSAFE_LPSTR, size_t, int, size_t, char**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1695:74: error: 'StringExValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1702:80: error: cannot convert 'int*' to 'const char**' for argument '1' to 'HRESULT StringExValidateSrcA(const char**, size_t*, size_t, DWORD)'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1718:43: error: invalid type argument of unary '*' (have 'int')
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1720:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1804:28: error: 'STRSAFE_PCNZWCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCopyNExW(STRSAFE_LPWSTR, size_t, int, size_t, wchar_t**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1812:74: error: 'StringExValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1819:80: error: cannot convert 'int*' to 'const wchar_t**' for argument '1' to 'HRESULT StringExValidateSrcW(const wchar_t**, size_t*, size_t, DWORD)'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1835:43: error: invalid type argument of unary '*' (have 'int')
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:1837:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2029:27: error: 'STRSAFE_PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCopyNExA(STRSAFE_LPSTR, size_t, int, size_t, char**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2038:74: error: 'StringExValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2046:80: error: cannot convert 'int*' to 'const char**' for argument '1' to 'HRESULT StringExValidateSrcA(const char**, size_t*, size_t, DWORD)'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2062:43: error: invalid type argument of unary '*' (have 'int')
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2064:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2144:27: error: 'STRSAFE_PCNZWCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCopyNExW(STRSAFE_LPWSTR, size_t, int, size_t, wchar_t**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2153:74: error: 'StringExValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2163:80: error: cannot convert 'int*' to 'const wchar_t**' for argument '1' to 'HRESULT StringExValidateSrcW(const wchar_t**, size_t*, size_t, DWORD)'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2180:43: error: invalid type argument of unary '*' (have 'int')
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2182:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCatA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2342:36: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCatW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2368:36: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCatA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2463:36: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCatW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2490:36: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCatExA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR, char**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2625:48: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2638:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2656:58: error: invalid conversion from 'STRSAFE_LPCSTR {aka const char*}' to 'int' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:262:1: error:   initializing argument 4 of 'HRESULT StringCopyWorkerA(STRSAFE_LPSTR, size_t, size_t*, int, size_t)' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCatExW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR, wchar_t**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2734:48: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2747:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2765:58: error: invalid conversion from 'STRSAFE_LPCWSTR {aka const wchar_t*}' to 'int' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:270:1: error:   initializing argument 4 of 'HRESULT StringCopyWorkerW(STRSAFE_LPWSTR, size_t, size_t*, int, size_t)' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCatExA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR, char**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2948:48: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2961:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:2979:58: error: invalid conversion from 'STRSAFE_LPCSTR {aka const char*}' to 'int' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:262:1: error:   initializing argument 4 of 'HRESULT StringCopyWorkerA(STRSAFE_LPSTR, size_t, size_t*, int, size_t)' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCatExW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR, wchar_t**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3054:48: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3067:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3085:58: error: invalid conversion from 'STRSAFE_LPCWSTR {aka const wchar_t*}' to 'int' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:270:1: error:   initializing argument 4 of 'HRESULT StringCopyWorkerW(STRSAFE_LPWSTR, size_t, size_t*, int, size_t)' [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3212:30: error: 'STRSAFE_PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCatNA(STRSAFE_LPSTR, size_t, int, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3233:40: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3246:30: error: 'STRSAFE_PCNZWCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCatNW(STRSAFE_LPWSTR, size_t, int, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3267:40: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3354:29: error: 'STRSAFE_PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCatNA(STRSAFE_LPSTR, size_t, int, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3378:40: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3391:29: error: 'STRSAFE_PCNZWCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCatNW(STRSAFE_LPWSTR, size_t, int, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3415:40: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3535:30: error: 'STRSAFE_PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCatNExA(STRSAFE_LPSTR, size_t, int, size_t, char**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3555:82: error: cannot convert 'int*' to 'const char**' for argument '1' to 'HRESULT StringExValidateSrcA(const char**, size_t*, size_t, DWORD)'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3566:45: error: invalid type argument of unary '*' (have 'int')
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3568:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3645:30: error: 'STRSAFE_PCNZWCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchCatNExW(STRSAFE_LPWSTR, size_t, int, size_t, wchar_t**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3665:82: error: cannot convert 'int*' to 'const wchar_t**' for argument '1' to 'HRESULT StringExValidateSrcW(const wchar_t**, size_t*, size_t, DWORD)'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3676:45: error: invalid type argument of unary '*' (have 'int')
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3678:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3862:29: error: 'STRSAFE_PCNZCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCatNExA(STRSAFE_LPSTR, size_t, int, size_t, char**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3884:82: error: cannot convert 'int*' to 'const char**' for argument '1' to 'HRESULT StringExValidateSrcA(const char**, size_t*, size_t, DWORD)'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3895:45: error: invalid type argument of unary '*' (have 'int')
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3897:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3970:29: error: 'STRSAFE_PCNZWCH' has not been declared
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbCatNExW(STRSAFE_LPWSTR, size_t, int, size_t, wchar_t**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:3994:82: error: cannot convert 'int*' to 'const wchar_t**' for argument '1' to 'HRESULT StringExValidateSrcW(const wchar_t**, size_t*, size_t, DWORD)'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4006:45: error: invalid type argument of unary '*' (have 'int')
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4008:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchVPrintfA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR, va_list)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4156:63: error: 'StringValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4162:39: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchVPrintfW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR, va_list)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4179:63: error: 'StringValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4185:39: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbVPrintfA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR, va_list)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4352:63: error: 'StringValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4358:39: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbVPrintfW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR, va_list)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4376:63: error: 'StringValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4382:39: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchPrintfA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR, ...)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4551:63: error: 'StringValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4561:39: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchPrintfW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR, ...)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4580:63: error: 'StringValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4590:39: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbPrintfA(STRSAFE_LPSTR, size_t, STRSAFE_LPCSTR, ...)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4771:63: error: 'StringValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4781:39: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbPrintfW(STRSAFE_LPWSTR, size_t, STRSAFE_LPCWSTR, ...)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4801:63: error: 'StringValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:4811:39: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchPrintfExA(STRSAFE_LPSTR, size_t, char**, size_t*, DWORD, STRSAFE_LPCSTR, ...)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5028:74: error: 'StringExValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5035:51: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5053:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchPrintfExW(STRSAFE_LPWSTR, size_t, wchar_t**, size_t*, DWORD, STRSAFE_LPCWSTR, ...)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5150:74: error: 'StringExValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5157:51: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5175:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbPrintfExA(STRSAFE_LPSTR, size_t, char**, size_t*, DWORD, STRSAFE_LPCSTR, ...)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5655:74: error: 'StringExValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5662:51: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5680:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbPrintfExW(STRSAFE_LPWSTR, size_t, wchar_t**, size_t*, DWORD, STRSAFE_LPCWSTR, ...)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5774:74: error: 'StringExValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5781:51: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:5799:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchVPrintfExA(STRSAFE_LPSTR, size_t, char**, size_t*, DWORD, STRSAFE_LPCSTR, va_list)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6267:74: error: 'StringExValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6274:51: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6292:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchVPrintfExW(STRSAFE_LPWSTR, size_t, wchar_t**, size_t*, DWORD, STRSAFE_LPCWSTR, va_list)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6384:74: error: 'StringExValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6391:51: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6409:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbVPrintfExA(STRSAFE_LPSTR, size_t, char**, size_t*, DWORD, STRSAFE_LPCSTR, va_list)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6874:74: error: 'StringExValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6881:51: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6899:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbVPrintfExW(STRSAFE_LPWSTR, size_t, wchar_t**, size_t*, DWORD, STRSAFE_LPCWSTR, va_list)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6988:74: error: 'StringExValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:6995:51: error: expected primary-expression before ',' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7013:40: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchGetsA(STRSAFE_LPSTR, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7422:63: error: 'StringValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7426:54: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchGetsW(STRSAFE_LPWSTR, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7439:63: error: 'StringValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7443:54: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbGetsA(STRSAFE_LPSTR, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7524:63: error: 'StringValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7528:54: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbGetsW(STRSAFE_LPWSTR, size_t)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7542:63: error: 'StringValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7546:54: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchGetsExA(STRSAFE_LPSTR, size_t, char**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7656:74: error: 'StringExValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7674:32: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCchGetsExW(STRSAFE_LPWSTR, size_t, wchar_t**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7753:74: error: 'StringExValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7771:32: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbGetsExA(STRSAFE_LPSTR, size_t, char**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7945:74: error: 'StringExValidateDestA' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:7963:32: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: In function 'HRESULT StringCbGetsExW(STRSAFE_LPWSTR, size_t, wchar_t**, size_t*, DWORD)':
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8039:74: error: 'StringExValidateDestW' cannot be used as a function
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8057:32: error: expected primary-expression before ')' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h: At global scope:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8181:10: error: 'StringCchLengthA' declared as an 'inline' variable
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8181:10: warning: '__stdcall__' attribute only applies to function types [-Wattributes]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8181:10: error: 'STRSAFE_PCNZCH' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8182:48: error: expected primary-expression before 'cchMax'
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8183:50: error: expected primary-expression before '*' token
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8183:52: error: 'pcchLength' was not declared in this scope
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8183:62: error: expression list treated as compound expression in initializer [-fpermissive]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:8184:1: error: expected ',' or ';' before '{' token
+In file included from E:\WinDDK\7600.16385.1\inc\api/Newdev.h:18:0,
+                 from ..\stdafx.h:16,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/pshpack1.h:31:16: error: expected declaration before end of line
+In file included from ..\stdafx.h:15:0,
+                 from ..\vJoyClient.cpp:5:
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:262:1: warning: inline function 'HRESULT StringCopyWorkerA(STRSAFE_LPSTR, size_t, size_t*, int, size_t)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:270:1: warning: inline function 'HRESULT StringCopyWorkerW(STRSAFE_LPWSTR, size_t, size_t*, int, size_t)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:192:1: warning: inline function 'HRESULT StringExValidateSrcA(const char**, size_t*, size_t, DWORD)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:333:1: warning: inline function 'HRESULT StringExHandleFillBehindNullA(STRSAFE_LPSTR, size_t, DWORD)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:345:1: warning: inline function 'HRESULT StringExHandleOtherFlagsA(STRSAFE_LPSTR, size_t, size_t, char**, size_t*, DWORD)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:199:1: warning: inline function 'HRESULT StringExValidateSrcW(const wchar_t**, size_t*, size_t, DWORD)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:339:1: warning: inline function 'HRESULT StringExHandleFillBehindNullW(STRSAFE_LPWSTR, size_t, DWORD)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:354:1: warning: inline function 'HRESULT StringExHandleOtherFlagsW(STRSAFE_LPWSTR, size_t, size_t, wchar_t**, size_t*, DWORD)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:212:1: warning: inline function 'HRESULT StringValidateDestAndLengthA(STRSAFE_LPCSTR, size_t, size_t*, size_t)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:225:1: warning: inline function 'HRESULT StringValidateDestAndLengthW(STRSAFE_LPCWSTR, size_t, size_t*, size_t)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:239:1: warning: inline function 'HRESULT StringExValidateDestAndLengthA(STRSAFE_LPCSTR, size_t, size_t*, size_t, DWORD)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:254:1: warning: inline function 'HRESULT StringExValidateDestAndLengthW(STRSAFE_LPCWSTR, size_t, size_t*, size_t, DWORD)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:278:1: warning: inline function 'HRESULT StringVPrintfWorkerA(STRSAFE_LPSTR, size_t, size_t*, STRSAFE_LPCSTR, va_list)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:297:1: warning: inline function 'HRESULT StringVPrintfWorkerW(STRSAFE_LPWSTR, size_t, size_t*, STRSAFE_LPCWSTR, va_list)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:319:1: warning: inline function 'HRESULT StringGetsWorkerA(STRSAFE_LPSTR, size_t, size_t*)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:325:1: warning: inline function 'HRESULT StringGetsWorkerW(STRSAFE_LPWSTR, size_t, size_t*)' used but never defined [enabled by default]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:172:1: warning: 'StringLengthWorkerA' defined but not used [-Wunused-variable]
+E:\WinDDK\7600.16385.1\inc\api/strsafe.h:178:1: warning: 'StringLengthWorkerW' defined but not used [-Wunused-variable]
+
+19:08:28 Build Finished (took 1s.526ms)
+
