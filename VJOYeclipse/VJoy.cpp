@@ -13,6 +13,11 @@
 #include <string>
 #include <sstream>
 #include <vector>
+
+//heh, from winNT
+
+#define VOID void
+
 //vjoy constants
 extern "C" {
 #include "VJoy.h"
@@ -26,11 +31,11 @@ int debugloopback=0;
 unsigned short com0;
 unsigned short com1;
 
-int signature=0;
+int signature=1;
 int multip=1;
 int zero=0;
-int umin=32767; //0x0fff
-int upos=32766; //0x0ffe
+int umin=32768; //0x0fff
+int upos=32767; //0x0ffe
 int loopmax=65535; //0xffff
 int sticknr=0;
 int axistype=0;
@@ -71,34 +76,39 @@ int main(int argc, char* argv[])
 	m_joyState[sticknr].YAxis = 0;
 	m_joyState[sticknr].ZAxis = 0;
 	m_joyState[sticknr].Buttons = 0x00000000;//no button pressed
-	m_joyState[sticknr].POV = (4 << 12) | (4 << 8) | (4 << 4) | 4;
+	m_joyState[sticknr].POV = (4 << 12) | (4 << 8) | (4 << 4) | 4;//pov? don't know this one
 	//send initial to uart
 	while(!exitval){
 		//send 'B'
 		SendToComPort(strlen(command), (unsigned char *) command);
 		//get answer
 		ReceiveFromComPort( (char *) recieve);
-		com0=((((unsigned short)recieve[1])<<8) | recieve[0]);
-		com1=((((unsigned short)recieve[3])<<8) | recieve[2]);
-		printf("raw: %c %c %c %c \n", recieve[0], recieve[1], recieve[2], recieve[3]);
+		com0=((0xff00 & (((unsigned short)recieve[1])<<8)) | (0x00ff & (unsigned short) recieve[0]));
+		com1=((0xff00 & (((unsigned short)recieve[3])<<8)) | (0x00ff & (unsigned short) recieve[2]));
+		printf("raw: %x %x %x %x \n", recieve[0], recieve[1], recieve[2], recieve[3]);
 		printf("com0: %d | com1: %d \n",com0,com1);
 		int comverted0=0;
+		int comverted1=0;
 		if(!comvert(com0, &comverted0))
 		{
-			if(axistype==0){
-				m_joyState[sticknr].YAxis =com0; //throttle 2 => 7 the bar down?
-				m_joyState[sticknr].ZAxis =com1; //throttle => 6th bar down?;
-			}
-			if(axistype==1){
-				m_joyState[sticknr].XAxis =com0; //throttle 2 => 7 the bar down?
-				m_joyState[sticknr].ZAxis =com1; //throttle => 6th bar down?;
-			}
-			if(axistype==2){
-				m_joyState[sticknr].XAxis =com0; //throttle 2 => 7 the bar down?
-				m_joyState[sticknr].YAxis =com1; //throttle => 6th bar down?;
+			if(!comvert(com1, &comverted1))
+			{
+				printf("adjusted com0: %d | com1: %d \n",comverted0,comverted1);
+				if(axistype==0){
+					m_joyState[sticknr].YAxis =com0; //throttle 2 => 7th bar down?
+					m_joyState[sticknr].ZAxis =com1; //throttle => 6th bar down?;
+				}
+				if(axistype==1){
+					m_joyState[sticknr].XAxis =com0; //throttle 2 => 5th bar down?
+					m_joyState[sticknr].ZAxis =com1; //throttle => 6th bar down?;
+				}
+				if(axistype==2){
+					m_joyState[sticknr].XAxis =com0; //throttle 2 => 5th bar down?
+					m_joyState[sticknr].YAxis =com1; //throttle => 7th bar down?;
+				}
 			}
 		}
-		Sleep(5);//allow qdec to stay up to date by sleeping occasionally
+		Sleep(10);//allow qdec to stay up to date by sleeping occasionally
 		VJoy_UpdateJoyState(sticknr, &m_joyState[sticknr]);
 		//printf("updating %d \n",m_joyState[sticknr].XAxis);
 		//exitval = getchar_unlocked(); figure out how to avoid locking the console
@@ -138,7 +148,7 @@ int updatejoyaxis(short data,char axis) {
 	}
 	return 1;
 }
-
+//-----------------------------------------------------------------------------------------------------------
 void OpenComms(void)
 {
     DCB Dcb;
@@ -176,20 +186,21 @@ void OpenComms(void)
             Dcb.BaudRate = CBR_57600;
 
             Dcb.ByteSize = 8;
+            Dcb.fBinary = TRUE;
             Dcb.Parity = NOPARITY;
             Dcb.StopBits = ONESTOPBIT;
             Dcb.fTXContinueOnXoff = TRUE;
 
             Dcb.fOutxCtsFlow = FALSE;//TRUE;                  // disable CTS output flow control
             Dcb.fOutxDsrFlow = FALSE;                  // disable DSR output flow control
-            Dcb.fDtrControl = DTR_CONTROL_HANDSHAKE  /*DTR_CONTROL_DISABLE DTR_CONTROL_ENABLE*/;
+            Dcb.fDtrControl = DTR_CONTROL_DISABLE  /*DTR_CONTROL_DISABLE DTR_CONTROL_ENABLE*/;
             Dcb.fDsrSensitivity = FALSE;               // enable DSR sensitivity
 
             Dcb.fOutX = FALSE;                        // disable XON/XOFF out flow control
             Dcb.fInX = FALSE;                         // disable XON/XOFF in flow control
             Dcb.fErrorChar = FALSE;                   // disable error replacement
             Dcb.fNull = FALSE;                        // disable null stripping
-            Dcb.fRtsControl = RTS_CONTROL_HANDSHAKE /* RTS_CONTROL_ENABLE  RTS_CONTROL_DISABLE*/;   //  enable RTS line
+            Dcb.fRtsControl = RTS_CONTROL_DISABLE /* RTS_CONTROL_ENABLE  RTS_CONTROL_DISABLE*/;   //  enable RTS line
             Dcb.fAbortOnError = TRUE;                 // don't abort reads/writes on error
 
             dwRetFlag = SetCommState(hComms, &Dcb);
@@ -281,14 +292,16 @@ int readin()//todo this is getting too big, split into subfunctions, maybe work 
 	    	case '#':
 	    		//use as comment, ignore comment lines
 	    		break;
-	    	case '$': //translator todo should be a struct for every axis seperate
+	    	case '$': //translator todo should be a struct for every axis separate
 
-	    		std::getline(iss, token, ' ');//discard mode signifier
+	    		//leave this out for now
+
+	    		/*std::getline(iss, token, ' ');//discard mode signifier
 	    		while(std::getline(iss, token, ' '))
 	    		{
 	    			int tokenvalue;//yes boost::lexicalcast is my favorite too, but I'm going to keep it simple and stupid :P
 	    			std::stringstream tokenstream(token);//in space, no one can hear you stream :P
-	    			tokenstream >> tokenvalue;//
+	    			tokenstream >> tokenvalue;
 	    			if(!tokenstream)//check for bad bit
 	    			{
 	    				printf("error tokenization fail: \" %s \" not a valid int", token.c_str());
@@ -311,15 +324,15 @@ int readin()//todo this is getting too big, split into subfunctions, maybe work 
     			}
     			else{
     				printf("error not a valid $ type line: found %d tokens", tempvalues.size());
-    			}
+    			}*/
 	    		break;
 	    	case '-':
 	    		std::getline(iss, token, ' ');//discard mode signifier
 				while(std::getline(iss, token, ' '))
 				{
-					int tokenvalue;//yes boost::lexicalcast is my favorite too, but I'm going to keep it simple and stupid :P
-					std::stringstream tokenstream(token);//in space, no one can hear you stream :P
-					tokenstream >> tokenvalue;//
+					int tokenvalue;
+					std::stringstream tokenstream(token);
+					tokenstream >> tokenvalue;
 					if(!tokenstream)//check for bad bit
 					{
 						printf("error tokenization fail: \" %s \" not a valid int", token.c_str());
@@ -351,19 +364,28 @@ int readin()//todo this is getting too big, split into subfunctions, maybe work 
 
 	  return 0;
 }
+//----------------------------------------------------------------------------------------------------------------------------
+//int umin=32768; //0x1000
+//int upos=32767; //0x0fff
+//int loopmax=65535; //0xffff
+
 int comvert(unsigned short com, int* newcom){
 	if(signature){
-		if(com<=umin){
+		if(com<=upos)
+		{
 			*newcom = com;
+			printf("conversion <= upos succes\n");
 			return 0;
 		}
-		if(com>=upos){
-			*newcom = com-loopmax;
+		if(com>upos)
+		{
+			*newcom = (((int) com-upos)-umin);
+			printf("conversion > succes\n");
 			return 0;
 		}
 		else
 		{
-			printf("invallid value from com");
+			printf("Invalid value from com\n");
 			return 1;
 		}
 	}

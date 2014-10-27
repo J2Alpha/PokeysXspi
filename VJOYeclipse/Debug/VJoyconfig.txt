@@ -1,0 +1,10 @@
+# VJOY configurator
+# the first character determines the type of setting
+# multiple the same type settings will overwrite each other
+# ' ' (space) is a separator for values
+# <= this is a commentline
+# '-' type lines determine the axis and stick number
+# '$' type lines determines the scale values, they are ingored for now
+# 'x' any other character as first character is ignored 
+# stick 0 or 1 and  axistype 0 = [x,y] 1= [x,z] 2 = [z,y]
+- 0 1

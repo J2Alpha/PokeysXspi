@@ -1,7 +1,22 @@
-20:53:58 **** Incremental Build of configuration Debug for project pokeysspi ****
+14:27:11 **** Incremental Build of configuration Debug for project pokeysspi ****
 Info: Internal Builder is used for build
+g++ "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\CHeaders\\XPLM" "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\CHeaders\\Wrappers" "-Ie:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\CHeaders\\Widgets" -O0 -g3 -Wall -c -fmessage-length=0 -o pokeysspi.o "..\\pokeysspi.cpp" 
+..\pokeysspi.cpp: In function 'void OpenComms()':
+..\pokeysspi.cpp:161:73: warning: format '%d' expects argument of type 'int', but argument 3 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:170:79: warning: format '%d' expects argument of type 'int', but argument 3 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:198:79: warning: format '%d' expects argument of type 'int', but argument 3 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:205:82: warning: format '%d' expects argument of type 'int', but argument 3 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:218:82: warning: format '%d' expects argument of type 'int', but argument 3 has type 'DWORD {aka long unsigned int}' [-Wformat]
+..\pokeysspi.cpp:225:45: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+..\pokeysspi.cpp: In function 'void CloseComms()':
+..\pokeysspi.cpp:239:47: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+..\pokeysspi.cpp: In function 'void SendToComPort(DWORD, unsigned char*)':
+..\pokeysspi.cpp:252:41: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+..\pokeysspi.cpp: In function 'void ReceiveFromComPort(char*)':
+..\pokeysspi.cpp:267:41: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
 g++ -static -o win.xpl pokeysspi.o -lXPLM -lXPWidgets "-Le:\\Users\\J2Alpha\\code\\pokeysserialiser\\pokeysspi\\XPSDK213\\SDK\\Libraries\\Win" -Xlinker --export-all-symbols -shared 
 cp "E:\\Users\\J2Alpha\\code\\pokeysserialiser\\PokeysXspi\\pokeysspi\\Debug\\win.xpl" "D:\\X-Plane 10 Demo\\Resources\\plugins\\serialplugin\\32" 
+cp: cannot create regular file `D:\\X-Plane 10 Demo\\Resources\\plugins\\serialplugin\\32': No such file or directory
 
-20:53:58 Build Finished (took 196ms)
+14:27:13 Build Finished (took 2s.178ms)
 

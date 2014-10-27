@@ -41,7 +41,7 @@
 								<option id="gnu.cpp.link.option.paths.2006581058" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="&quot;e:\Users\J2Alpha\code\pokeysserialiser\PokeysXspi\VJOYeclipse&quot;"/>
 								</option>
-								<option id="gnu.cpp.link.option.other.1501141956" superClass="gnu.cpp.link.option.other" valueType="stringList">
+								<option id="gnu.cpp.link.option.other.1501141956" name="Other options (-Xlinker [option])" superClass="gnu.cpp.link.option.other" valueType="stringList">
 									<listOptionValue builtIn="false" value="--enable-stdcall-fixup"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.225110333" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">

@@ -1,10 +1,10 @@
-00:05:23 **** Incremental Build of configuration Debug for project VJOYeclipse ****
+22:55:01 **** Incremental Build of configuration Debug for project VJOYeclipse ****
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o VJoy.o "..\\VJoy.cpp" 
 In file included from ..\VJoy.cpp:7:0:
 ..\stdafx.h:22:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
-..\VJoy.cpp:40:36: warning: missing braces around initializer for 'JOYSTICK_STATE {aka _JOYSTICK_STATE}' [-Wmissing-braces]
+..\VJoy.cpp:45:36: warning: missing braces around initializer for 'JOYSTICK_STATE {aka _JOYSTICK_STATE}' [-Wmissing-braces]
 g++ "-Le:\\Users\\J2Alpha\\code\\pokeysserialiser\\PokeysXspi\\VJOYeclipse" -Xlinker --enable-stdcall-fixup -o VJOYeclipse.exe VJoy.o StdAfx.o -lVJoy -lVJoy32 -lVJoy64 
 
-00:05:24 Build Finished (took 918ms)
+22:55:02 Build Finished (took 790ms)
 
