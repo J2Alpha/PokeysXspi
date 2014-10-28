@@ -14,23 +14,37 @@
 #include <sstream>
 #include <vector>
 
-//heh, from winNT
+//openvjoy headers
+#define VJOYINTERFACE_EXPORTS 1
+#include "public.h"
+#include "vjoyinterface.h"
+#include <malloc.h>
+#include <stdlib.h>
 
+//open source vjoy globals
+USHORT X, Y, Z, ZR, XR;							// Position of several axes
+JOYSTICK_POSITION	iReport;					// The structure that holds the full position data
+BYTE id=1;										// ID of the target vjoy device (Default is 1)
+UINT iInterface=1;								// Default target vJoy device
+BOOL ContinuousPOV=FALSE;
+
+//closed source vjoy nonsense
+//style: blast from the past
 #define VOID void
-
-//vjoy constants
 extern "C" {
 #include "VJoy.h"
 }
+
+//com handle
 int debugger=0;
 bool CommsEnabled;
 HANDLE hComms;
 DWORD dwRetFlag;
 
+//various
 int debugloopback=0;
 unsigned short com0;
 unsigned short com1;
-
 int signature=1;
 int multip=1;
 int zero=0;
@@ -40,14 +54,14 @@ int loopmax=65535; //0xffff
 int sticknr=0;
 int axistype=0;
 
+//vjoystuff
+int openvjoyclosed();
 int updatejoyaxis(short data,char axis);
-
 JOYSTICK_STATE m_joyState[2] = { 0 };
-//m_joyState[0].XAxis = 8th bar down?
-//m_joyState[0].YAxis = 7th bar down?
-//m_joyState[0].ZAxis = 6th bar down?
-//coms and configs
+char name[]= "";
+char serial[]= "";
 
+//comms
 //open port
 void OpenComms(void);
 //close port
@@ -59,17 +73,156 @@ void ReceiveFromComPort(char *Buffer);
 int readin(void);
 int comvert(unsigned short com, int* newcom);
 
-char name[]= "DCcVthrottle";
-char serial[]= "1237942";
+//openVjoy
+#define ROBUST
+
+//settings
+int useopenvjoy =1;
+int openvjoyopen(void);
 
 int main(int argc, char* argv[])
+{
+	//open source version of vjoy, no reboots necesairy, but messier code
+	int exitcode = 0;
+	if(useopenvjoy)
+	{
+		//system(" devcon enable @HID\HID*0001");
+		exitcode = openvjoyopen();
+		RelinquishVJD(iInterface);
+	}
+	//closed source version of vjoy, clean code but periodic reboots necesairy
+	if(!useopenvjoy)
+	{
+		exitcode = openvjoyclosed();
+	}
+
+	printf("unexpected termination, press any key to exit: %d\n",exitcode);
+	fgetchar();
+	return 0;
+}
+int openvjoyopen()
+{
+							// Continuous POV hat (or 4-direction POV Hat)
+	int count=0;
+
+	if (!vJoyEnabled())
+	{
+		printf("vJoy driver not enabled: Failed Getting vJoy attributes.\n");
+		return -2;
+	}
+	else
+	{
+		printf("Vendor: %S\nProduct :%S\nVersion Number:%S\n", TEXT(GetvJoyManufacturerString()),  TEXT(GetvJoyProductString()), TEXT(GetvJoySerialNumberString()));
+	}
+	VjdStat status = GetVJDStatus(iInterface);
+	switch (status)
+	{
+	case VJD_STAT_OWN:
+		_tprintf("vJoy Device %d is already owned by this feeder\n", iInterface);
+		break;
+	case VJD_STAT_FREE:
+		_tprintf("vJoy Device %d is free\n", iInterface);
+		break;
+	case VJD_STAT_BUSY:
+		_tprintf("vJoy Device %d is already owned by another feeder\nCannot continue\n", iInterface);
+		return -3;
+	case VJD_STAT_MISS:
+		_tprintf("vJoy Device %d is not installed or disabled\nCannot continue\n", iInterface);
+		return -4;
+	default:
+		_tprintf("vJoy Device %d general error\nCannot continue\n", iInterface);
+		return -1;
+	};
+	// Check which axes are supported
+	BOOL AxisX  = GetVJDAxisExist(iInterface, HID_USAGE_X);
+	BOOL AxisY  = GetVJDAxisExist(iInterface, HID_USAGE_Y);
+	BOOL AxisZ  = GetVJDAxisExist(iInterface, HID_USAGE_Z);
+	BOOL AxisRX = GetVJDAxisExist(iInterface, HID_USAGE_RX);
+	BOOL AxisRZ = GetVJDAxisExist(iInterface, HID_USAGE_RZ);
+	// Get the number of buttons and POV Hat switchessupported by this vJoy device
+	int nButtons  = GetVJDButtonNumber(iInterface);
+	int ContPovNumber = GetVJDContPovNumber(iInterface);
+	int DiscPovNumber = GetVJDDiscPovNumber(iInterface);
+
+	// Print results
+	printf("\nvJoy Device %d capabilities:\n", iInterface);
+	printf("Number of buttons\t\t%d\n", nButtons);
+	printf("Number of Continuous POVs\t%d\n", ContPovNumber);
+	printf("Number of Discrete POVs\t\t%d\n", DiscPovNumber);
+	printf("Axis X\t\t%s\n", AxisX?"Yes":"No");
+	printf("Axis Y\t\t%s\n", AxisX?"Yes":"No");
+	printf("Axis Z\t\t%s\n", AxisX?"Yes":"No");
+	printf("Axis Rx\t\t%s\n", AxisRX?"Yes":"No");
+	printf("Axis Rz\t\t%s\n", AxisRZ?"Yes":"No");
+	//get interface
+	if ((status == VJD_STAT_OWN) || ((status == VJD_STAT_FREE) && (!AcquireVJD(iInterface))))
+	{
+		_tprintf("Failed to acquire vJoy device number %d.\n", iInterface);
+		return -1;
+	}
+	else
+	{
+		_tprintf("Acquired: vJoy device number %d.\n", iInterface);
+	}
+	_tprintf("\npress enter to start feeding");
+	getchar();
+	// Reset this device to default values
+	ResetVJD(iInterface);
+	//set scratch variables and constants
+	char exitval=0;
+	char command[1] ={'B'};
+	char recieve[4] ={0,0,0,0};
+	//open com handle
+	OpenComms();
+	if(hComms == INVALID_HANDLE_VALUE)
+	{
+		exitval = 1;
+	}
+	BOOL res = TRUE;
+	// Feed the device in endless loop from com
+	while(exitval==0 && res==TRUE)
+	{
+
+		SendToComPort(strlen(command), (unsigned char *) command);//send 'B'
+		//get answer
+		ReceiveFromComPort( (char *) recieve);
+		com0=((0xff00 & (((unsigned short)recieve[1])<<8)) | (0x00ff & (unsigned short) recieve[0]));
+		com1=((0xff00 & (((unsigned short)recieve[3])<<8)) | (0x00ff & (unsigned short) recieve[2]));
+		printf("raw: %x %x %x %x \n", recieve[0], recieve[1], recieve[2], recieve[3]);
+		printf("com0: %d | com1: %d \n",com0,com1);
+		int comverted0=0;
+		int comverted1=0;
+		if(!comvert(com0, &comverted0))
+		{
+			if(!comvert(com1, &comverted1))
+			{
+				printf("adjusted com0: %d | com1: %d \n",comverted0,comverted1);
+				res = SetAxis(comverted0, iInterface, HID_USAGE_X); //set one axis
+				res = SetAxis(comverted1, iInterface, HID_USAGE_Z); //set the other
+			}
+			else
+			{
+				printf("com1 failed to convert");
+				exitval=1;
+			}
+		}
+		else
+		{
+			printf("com0 failed to convert");
+			exitval=1;
+		}
+	}
+	return -5;
+}
+int openvjoyclosed()
 {
 	char exitval=0;
 	char command[1] ={'B'};
 	char recieve[4] ={0,0,0,0};
 	OpenComms();
 	VJoy_Initialize(name,serial);
-	if(hComms == INVALID_HANDLE_VALUE){
+	if(hComms == INVALID_HANDLE_VALUE)
+	{
 		exitval = 1;
 	}
 	m_joyState[sticknr].XAxis = 0;
@@ -78,6 +231,7 @@ int main(int argc, char* argv[])
 	m_joyState[sticknr].Buttons = 0x00000000;//no button pressed
 	m_joyState[sticknr].POV = (4 << 12) | (4 << 8) | (4 << 4) | 4;//pov? don't know this one
 	//send initial to uart
+	int reboot = 0;
 	while(!exitval){
 		//send 'B'
 		SendToComPort(strlen(command), (unsigned char *) command);
@@ -110,14 +264,21 @@ int main(int argc, char* argv[])
 		}
 		Sleep(10);//allow qdec to stay up to date by sleeping occasionally
 		VJoy_UpdateJoyState(sticknr, &m_joyState[sticknr]);
+		reboot++;
+		if(reboot==100)
+		{
+			VJoy_Shutdown(); //pfff, should work though
+			Sleep(1);
+			VJoy_Initialize(name,serial);
+			reboot =0;
+		}
 		//printf("updating %d \n",m_joyState[sticknr].XAxis);
 		//exitval = getchar_unlocked(); figure out how to avoid locking the console
 	}
 	//VJoy_UpdateJoyState(0, &m_joyState[0]);
 	VJoy_Shutdown();
-	printf("unexpected termination, press any key to exit \n");
-	fgetchar();
-	return 0;
+
+	return 1;
 }
 int updatejoyaxis(short data,char axis) {
 	char buffer [100];

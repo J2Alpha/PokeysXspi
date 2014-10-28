@@ -22,4 +22,27 @@
 #pragma comment(lib,"VJoy32.lib")
 #endif
 
+//from open vjoy
+// stdafx.h : include file for standard system include files,
+// or project specific include files that are used frequently, but
+// are changed infrequently
+//
+
+#pragma once
+
+#include <stdio.h>
+#include <tchar.h>
+
+#include <windows.h>
+#include <basetyps.h>
+//#include <cfgmgr32.h> //i've included the libs instead, easier
+#include <Setupapi.h>
+//#include <strsafe.h>
+//#include <Newdev.h>
+#include <INITGUID.H>
+
+
+
+// TODO: reference additional headers your program requires here
+
 #endif // !defined(AFX_STDAFX_H__B4543DD5_284F_4EB2_A6B0_8757CF067C24__INCLUDED_)
