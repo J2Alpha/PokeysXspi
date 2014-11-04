@@ -45,7 +45,7 @@ DWORD dwRetFlag;
 int debugloopback=0;
 unsigned short com0;
 unsigned short com1;
-int signature=1;
+int signature=0;
 int multip=1;
 int zero=0;
 int umin=32768; //0x0fff
@@ -82,10 +82,18 @@ int openvjoyopen(void);
 
 int main(int argc, char* argv[])
 {
+	if(signature){
+		printf("signed mode\n");
+	}
+	else
+	{
+		printf("unsigned mode\n");
+	}
 	//open source version of vjoy, no reboots necesairy, but messier code
 	int exitcode = 0;
 	if(useopenvjoy)
 	{
+		printf("using open vJoy\n");
 		//system(" devcon enable @HID\HID*0001");
 		exitcode = openvjoyopen();
 		RelinquishVJD(iInterface);
@@ -164,7 +172,13 @@ int openvjoyopen()
 	{
 		_tprintf("Acquired: vJoy device number %d.\n", iInterface);
 	}
-	_tprintf("\npress enter to start feeding");
+	int testvert1=0;
+	int testvert0=0;
+	printf("conversion test \n");
+	comvert((upos + 1000), &testvert0);
+	comvert((upos - 1000), &testvert1);
+	printf("%d translates to %d | %d translates to %d \n",(upos + 1000), testvert0, (upos - 1000), testvert1);
+	_tprintf("\n --press enter to start feeding-- \n");
 	getchar();
 	// Reset this device to default values
 	ResetVJD(iInterface);
@@ -530,8 +544,10 @@ int readin()//todo this is getting too big, split into subfunctions, maybe work 
 //int upos=32767; //0x0fff
 //int loopmax=65535; //0xffff
 
+
 int comvert(unsigned short com, int* newcom){
-	if(signature){
+	if(signature)//center is 0, true resolution
+	{
 		if(com<=upos)
 		{
 			*newcom = com;
@@ -541,7 +557,7 @@ int comvert(unsigned short com, int* newcom){
 		if(com>upos)
 		{
 			*newcom = (((int) com-upos)-umin);
-			printf("conversion > succes\n");
+			printf("conversion > upos succes\n");
 			return 0;
 		}
 		else
@@ -550,9 +566,25 @@ int comvert(unsigned short com, int* newcom){
 			return 1;
 		}
 	}
-	else{
-		*newcom = com;
-		return 1;
+	else// 0 is 0, half resolution
+	{
+		if(com<upos)
+		{
+			*newcom = ((com + upos) >> 1);//divide by 2 is supposed to be safer, but this is surer
+			printf("conversion <= upos succes\n");
+			return 0;
+		}
+		if(com>=upos)
+		{
+			*newcom = (((int) (com-upos)) >> 1);
+			printf("conversion > upos succes\n");
+			return 0;
+		}
+		else
+		{
+			printf("Invalid value from com\n");
+			return 1;
+		}
 	}
 	return 1;
 }

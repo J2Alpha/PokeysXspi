@@ -1,1 +1,17 @@
-Info: Nothing to build for VJOYeclipse
+02:40:42 **** Incremental Build of configuration Debug for project VJOYeclipse ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o VJoy.o "..\\VJoy.cpp" 
+In file included from ..\VJoy.cpp:7:0:
+..\stdafx.h:22:0: warning: ignoring #pragma comment  [-Wunknown-pragmas]
+..\VJoy.cpp:60:36: warning: missing braces around initializer for 'JOYSTICK_STATE {aka _JOYSTICK_STATE}' [-Wmissing-braces]
+..\VJoy.cpp: In function 'int openvjoyopen()':
+..\VJoy.cpp:123:157: warning: format '%S' expects argument of type 'wchar_t*', but argument 2 has type 'PVOID {aka void*}' [-Wformat]
+..\VJoy.cpp:123:157: warning: format '%S' expects argument of type 'wchar_t*', but argument 3 has type 'PVOID {aka void*}' [-Wformat]
+..\VJoy.cpp:123:157: warning: format '%S' expects argument of type 'wchar_t*', but argument 4 has type 'PVOID {aka void*}' [-Wformat]
+..\VJoy.cpp:114:6: warning: unused variable 'count' [-Wunused-variable]
+..\VJoy.cpp:146:7: warning: unused variable 'AxisY' [-Wunused-variable]
+..\VJoy.cpp:147:7: warning: unused variable 'AxisZ' [-Wunused-variable]
+g++ "-Le:\\Users\\J2Alpha\\code\\pokeysserialiser\\PokeysXspi\\VJOYeclipse" "-LE:\\WinDDK\\7600.16385.1\\lib\\win7\\i386" -Xlinker --enable-stdcall-fixup -o vJoySerialPokeys.exe VJoy.o StdAfx.o -lNewdev -lcfgmgr32 -lvjoyinterface -lVJoy -lVJoy32 -lVJoy64 
+
+02:40:43 Build Finished (took 952ms)
+
